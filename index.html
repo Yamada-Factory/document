@@ -9,11 +9,24 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
 </head>
 <body>
+  <!-- Edit on github ボタンの表示 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <div id="app"></div>
   <script>
     window.$docsify = {
       name: '',
-      repo: ''
+      loadSidebar: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md'
+      },
+      subMaxLevel: 3,
+      'flexible-alerts': {
+        style: 'flat'
+      },
+      plantuml: {
+        skin: 'classic',
+      },
+      repo: 'Yamada-Factory/document',
     }
   </script>
   <!-- Docsify v4 -->

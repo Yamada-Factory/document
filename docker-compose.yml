@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  docsify:
+    image:  ghcr.io/sujaykumarh/docsify:latest
+    ports:
+      - 3000:3000
+      - 3535:3535
+    volumes:
+      - ./:/docs    # Source
+    command: serve --livereload-port=3535
